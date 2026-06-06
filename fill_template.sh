@@ -30,7 +30,7 @@ sed_inplace "s/eframe_template/$crate/g" Cargo.toml
 sed_inplace "s/eframe_template/$crate/g" src/main.rs
 sed_inplace "s/eframe template/$crate/g" index.html
 sed_inplace "s/eframe_template/$crate/g" assets/sw.js
-sed_inplace "s/Emil Ernerfeldt/$name/g" Cargo.toml
-sed_inplace "s/emil.ernerfeldt@gmail.com/$email/g" Cargo.toml
+sed_inplace "s/John Peterson/$name/g" Cargo.toml
+sed_inplace "s/johnp5419@gmail.com/$email/g" Cargo.toml
 
 echo "Done."
