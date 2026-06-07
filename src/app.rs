@@ -112,12 +112,12 @@ impl eframe::App for TemplateApp {
 
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         // Floating top-right theme toggle
-        let screen_rect = ui.ctx().screen_rect();
+        let content_rect = ui.ctx().content_rect();
         egui::Area::new(egui::Id::new("theme_toggle"))
-            .fixed_pos(egui::pos2(screen_rect.right() - 36.0, 7.0))
+            .fixed_pos(egui::pos2(content_rect.right() - 36.0, 7.0))
             .order(egui::Order::Foreground)
             .show(ui.ctx(), |ui| {
-                egui::Frame::none()
+                egui::Frame::default()
                     .inner_margin(4.0)
                     .show(ui, |ui| {
                         let is_dark = ui.visuals().dark_mode;
